@@ -1,9 +1,13 @@
 name: pnpm Example Workflow
 on:
   push:
+    branches: [ "main", "dev" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: ${{ github.ref }}
     strategy:
       fail-fast: false
       matrix:
