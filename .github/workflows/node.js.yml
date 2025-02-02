@@ -9,9 +9,9 @@ jobs:
       matrix:
         # Using too much GitHub Actions free usage per month...
         # node-version: [14.x, 15.x, 16.x, 17.x, 18.x]
-        node-version: [17.x, 18.x]
+        node-version: [18.x]
         # os: [ubuntu-latest, macos-latest, windows-latest]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
     - uses: pnpm/action-setup@v2.0.1
