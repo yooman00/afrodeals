@@ -1,0 +1,47 @@
+name: pnpm Example Workflow
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Using too much GitHub Actions free usage per month...
+        # node-version: [14.x, 15.x, 16.x, 17.x, 18.x]
+        node-version: [17.x, 18.x]
+        # os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 7.0.0
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Setup environment variables
+      env:
+        PUBLIC_SNIPCART_API_KEY: ${{ secrets.PUBLIC_SNIPCART_API_KEY }}
+      run: |
+        cd packages/playground
+        touch .env
+        echo PUBLIC_SNIPCART_API_KEY="$PUBLIC_SNIPCART_API_KEY" >> .env
+    - name: Install dependencies
+      run: pnpm -r install
+    - name: Build
+      run: pnpm -r build
+    # - name: Unit tests
+    #   run: pnpm -r test
+  deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4

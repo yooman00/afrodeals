@@ -1,0 +1,147 @@
+---
+import { SnipcartSetup } from '@lloydjatkinson/astro-snipcart/astro';
+import { StorePageLayout } from '@lloydjatkinson/astro-snipcart-design-system/astro';
+
+import { headerPageLinks, footerPageLinks } from '../layouts/config';
+
+import {
+	Stack,
+	ProductGrid,
+	PageLayout,
+	Hero,
+	ProductCard,
+	Banner,
+	Storefront,
+	ProductWithColorPicker,
+	Text,
+	Link,
+	Button,
+    Price,
+} from '@lloydjatkinson/astro-snipcart-design-system/astro';
+
+import Component from '../../src/Component.astro';
+import Prose from '../../src/Prose.astro';
+
+import { Content as PriceDocs } from '../component-docs/Price.md';
+import { Content as TextDocs } from '../component-docs/Text.md';
+---
+<StorePageLayout
+    title="Astro Snipcart Design System Component Explorer"
+    description="Astro Snipcart Design System Component Explorer"
+    headerLinks={ headerPageLinks }
+    footerLinks={ footerPageLinks }
+    storeName="Astro Snipcart Integration"
+    useDefaultLogo="code">
+    <Stack>
+        <Hero
+            heading="Component Explorer"
+            subHeading="Try out the availiable components">
+                    <Stack
+                direction="vertical"
+                gap={{
+                    mobile: 'large'
+                }}>
+                <Text tone="informational">
+                    This is an optional design system for the Astro Snipcart E-commerce integration.
+                    The design system is implemented with Astro and Tailwind. Some components are interactive and require client side code - this is implemented with Alpine.
+                </Text>
+                <Stack
+                    gap={{
+                        mobile: 'xsmall'
+                    }}>
+                    <!-- <Text size="small">There are currently { integrationComponents.length } integration components.</Text>
+                    <Text size="small">There are currently { designSystemComponents.length } design system components.</Text>
+                    <Text size="small">Covered by { integrationComponentUnitTests.length + designSystemUnitTests } unit tests files.</Text> -->
+                </Stack>
+                <Stack
+                    direction="vertical"
+                    gap={{
+                        mobile: 'small'
+                    }}>
+                    <Link to="https://astro-snipcart.vercel.app/en/introduction">
+                        <Text decoration="underline" tone="positive">
+                            Documentation
+                        </Text>
+                    </Link>
+                </Stack>
+                <Link to="https://twitter.com/lloydjatkinson">
+                    <Text
+                        decoration="underline">
+                        Made with ♥ by @lloydjatkinson
+                    </Text>
+                </Link>
+            </Stack>
+        </Hero>
+        <Stack>
+            <div>
+                <Text weight="medium">
+                    This page is a work in progress
+                </Text>
+                   <Link to="https://astro-snipcart.vercel.app/en/design-system/components-and-typescript">
+                        <Text decoration="underline" tone="positive">
+                            In the meantime, check out the documentation!
+                        </Text>
+                    </Link>
+            </div>
+            <Component
+                name="Price"
+                description="The price component. Uses the Text typography component to style prices and sale prices."
+                framework={['astro']}
+                state="ready">
+                <Stack
+                    gap={{
+                        mobile: 'xsmall'
+                    }}>
+                    <Price currency="GBP" price={ 10 } />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="xsmall" />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="small" />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="standard" />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="medium" />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="large" />
+                    <Price currency="GBP" price={ 10 } originalPrice={ 20 } size="xlarge" />
+                    <Prose>
+                        <PriceDocs />
+                    </Prose>
+                </Stack>
+            </Component>
+            <Component
+                name="Typography - Text"
+                description="The Text component. Used for all text in the design system."
+                framework={['astro']}
+                state="ready">
+                <Stack
+                    gap={{
+                        mobile: 'medium'
+                    }}>
+                    <div class="bg-neutral-200">
+                        <Text tone="attention">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text tone="caution">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text tone="informational">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text tone="neutral">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text tone="passive">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text tone="positive">Jackdaws love my big sphinx of quartz.</Text>
+                    </div>
+                    <div>
+                        <Text weight="light">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text weight="regular">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text weight="medium">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text weight="strong">Jackdaws love my big sphinx of quartz.</Text>
+                    </div>
+                    
+                    <div>
+                        <Text size="xsmall">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text size="small">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text size="standard">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text size="medium">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text size="large">Jackdaws love my big sphinx of quartz.</Text>
+                        <Text size="xlarge">Jackdaws love my big sphinx of quartz.</Text>
+                    </div>
+                    <Prose>
+                        <TextDocs />
+                    </Prose>
+                </Stack>
+            </Component>
+        </Stack>
+    </Stack>
+</StorePageLayout>
+

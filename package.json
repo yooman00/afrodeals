@@ -1,0 +1,15 @@
+{
+  "name": "astro-snipcart",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "cd packages/documentation && pnpm run dev && cd -",
+    "playground": "cd packages/playground && pnpm run dev && cd -"
+  },
+  "keywords": [],
+  "author": "Lloyd Atkinson",
+  "license": "MIT"
+}

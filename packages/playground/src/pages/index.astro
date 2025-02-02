@@ -1,0 +1,81 @@
+---
+import { StorePageLayout } from '@lloydjatkinson/astro-snipcart-design-system/astro';
+
+import {
+	Stack,
+	Storefront,
+	Text,
+	Link,
+} from '@lloydjatkinson/astro-snipcart-design-system/astro';
+import { ProductMeta, SnipcartProduct } from '@lloydjatkinson/astro-snipcart';
+
+import { headerPageLinks, footerPageLinks } from '../layouts/config';
+
+const products =
+	(await Astro.glob<SnipcartProduct & ProductMeta>('../pages/products/*.md'))
+	.map((markdownProduct) => ({ ...markdownProduct.frontmatter }));
+
+// sort products by cheapest first
+const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+
+const welcome = "A real world demo of the Astro Snipcart Design System for the Astro Snipcart E-commerce integration!";
+---
+<StorePageLayout
+	title="Astro Snipcart by @lloydjatkinson"
+	description={ welcome }
+	headerLinks={ headerPageLinks }
+    footerLinks={ footerPageLinks }
+	storeName="Astro Snipcart Integration"
+    useDefaultLogo="hexagon"
+	image="/assets/images/t-shirts-on-hangers.jpg"
+	banner={ welcome }>
+	<Storefront
+		title="Astro Snipcart Integration"
+		description="Demo store for Astro and Snipcart"
+		heroHeading="The here and now"
+		heroSubHeading={ welcome }
+		heroImage="/assets/images/t-shirts-on-hangers.jpg"
+		products={ sortedProducts }>
+		<Stack
+			direction="vertical"
+			gap={{
+				mobile: 'large'
+			}}>
+			<Text tone="informational">
+				This is an optional design system for the Astro Snipcart E-commerce integration.
+				The design system is E-commerce orientated enabling developers to build their own E-commerce store.
+				The integration can be used with or without this design system.
+			</Text>
+			<Text weight="medium">
+				Start selling products with some HTML and Astro components in minutes! This site was made using this design system.
+			</Text>
+			<Stack
+				direction="vertical"
+				gap={{
+					mobile: 'small'
+				}}>
+				<Link to="https://astro-snipcart.vercel.app/en/introduction">
+					<Text decoration="underline" tone="positive">
+						Documentation
+					</Text>
+				</Link>
+				<Link to="/design">
+					<Text decoration="underline" tone="positive" weight="medium">
+						Documentation - Component Explorer 🚀
+					</Text>
+				</Link>
+				<Link to="https://snipcart.com/">
+					<Text decoration="underline" tone="positive">
+						Snipcart Documentation
+					</Text>
+				</Link>
+			</Stack>
+			<Link to="https://twitter.com/lloydjatkinson">
+				<Text
+					decoration="underline">
+					Made with ♥ by @lloydjatkinson
+				</Text>
+			</Link>
+		</Stack>
+	</Storefront>
+</StorePageLayout>
