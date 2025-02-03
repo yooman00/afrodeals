@@ -22,7 +22,10 @@ jobs:
         node-version: [18.x]
         os: [ubuntu-latest]
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout your repository using git
+      uses: actions/checkout@v4
+    - name: Install, build, and upload your site
+      uses: withastro/action@v3
     - uses: pnpm/action-setup@v2.0.1
       with:
         version: 7.0.0
