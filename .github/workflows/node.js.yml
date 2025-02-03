@@ -47,6 +47,7 @@ jobs:
     - name: Install, build, and upload your site
       uses: withastro/action@v3
       with:
+        path: ./packages/playground
         package-manager: pnpm@7
 
   deploy:
