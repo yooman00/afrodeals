@@ -22,10 +22,7 @@ jobs:
         node-version: [18.x]
         os: [ubuntu-latest]
     steps:
-    - name: Checkout your repository using git
-      uses: actions/checkout@v4
-    - name: Install, build, and upload your site
-      uses: withastro/action@v3
+    - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v2.0.1
       with:
         version: 7.0.0
@@ -41,12 +38,14 @@ jobs:
         cd packages/playground
         touch .env
         echo PUBLIC_SNIPCART_API_KEY="$PUBLIC_SNIPCART_API_KEY" >> .env
-    - name: Install dependencies
-      run: pnpm -r install
-    - name: Build
-      run: pnpm -r build
+    # - name: Install dependencies
+    #   run: pnpm -r install
+    #- name: Build
+    #  run: pnpm -r build
     # - name: Unit tests
     #   run: pnpm -r test
+    - name: Install, build, and upload your site
+      uses: withastro/action@v3
   deploy:
       needs: build
       runs-on: ubuntu-latest
