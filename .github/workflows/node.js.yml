@@ -44,8 +44,7 @@ jobs:
       run: pnpm -r build
     # - name: Unit tests
     #   run: pnpm -r test
-    - name: Install, build, and upload your site
-      uses: withastro/action@v3
+
   deploy:
       needs: build
       runs-on: ubuntu-latest
