@@ -26,6 +26,13 @@ jobs:
     steps:
         - name: Checkout your repository using git
           uses: actions/checkout@v4
+        - name: Setup environment variables
+          env:
+            PUBLIC_SNIPCART_API_KEY: ${{ secrets.PUBLIC_SNIPCART_API_KEY }}
+          run: |
+            cd packages/playground
+            touch .env
+            echo PUBLIC_SNIPCART_API_KEY="$PUBLIC_SNIPCART_API_KEY" >> .env
         - name: Install, build, and upload your site output
           uses: withastro/action@v2
           with:
