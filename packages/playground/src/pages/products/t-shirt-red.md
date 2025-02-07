@@ -4,7 +4,7 @@ name: T-Shirt (Red)
 decscription: Tri-blend T-Shirt designed for softness and comfort
 price: 18.00
 currency: GBP
-image: /assets/images/t-shirt-red.jpg
+image: /afrodeals/assets/images/t-shirt-red.jpg
 categories:
     - clothes
     - t-shirt

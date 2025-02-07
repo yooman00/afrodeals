@@ -4,7 +4,7 @@ name: T-Shirt (Green)
 decscription: Tri-blend T-Shirt designed for softness and comfort
 price: 18.50
 currency: GBP
-image: /assets/images/t-shirt-green.jpg
+image: /afrodeals/assets/images/t-shirt-green.jpg
 categories:
     - clothes
     - t-shirt

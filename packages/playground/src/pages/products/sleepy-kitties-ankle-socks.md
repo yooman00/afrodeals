@@ -5,7 +5,7 @@ description: Soft and comfortable ankle socks with stripes and a cute cat design
 price: 6
 originalPrice: 8
 currency: GBP
-image: /assets/images/socks-feet-pose-in-cat.jpg
+image: /afrodeals/assets/images/socks-feet-pose-in-cat.jpg
 variants:
     - apple
     - banana

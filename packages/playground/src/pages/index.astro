@@ -27,14 +27,14 @@ const welcome = "A real world demo of the Astro Snipcart Design System for the A
     footerLinks={ footerPageLinks }
 	storeName="Astro Snipcart Integration"
     useDefaultLogo="hexagon"
-	image="/assets/images/t-shirts-on-hangers.jpg"
+	image=`${import.meta.env.BASE_URL}/assets/images/t-shirts-on-hangers.jpg`
 	banner={ welcome }>
 	<Storefront
 		title="Astro Snipcart Integration"
 		description="Demo store for Astro and Snipcart"
 		heroHeading="The here and now"
 		heroSubHeading={ welcome }
-		heroImage="/assets/images/t-shirts-on-hangers.jpg"
+		heroImage=`${import.meta.env.BASE_URL}/assets/images/t-shirts-on-hangers.jpg`
 		products={ sortedProducts }>
 		<Stack
 			direction="vertical"

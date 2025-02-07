@@ -5,7 +5,7 @@ decscription: Carton contenant 15 paquets de 3 bâtons de manioc (15x3).
 price: 44.99
 originalPrice: 44.99
 currency: GBP
-image: "/assets/images/1.png"
+image: /afrodeals/assets/images/1.png
 variants:
     - apple
     - banana

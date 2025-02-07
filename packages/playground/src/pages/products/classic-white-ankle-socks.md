@@ -5,7 +5,7 @@ decscription: Soft and comfortable ankle socks with a classic white design.
 price: 6
 originalPrice: 8
 currency: GBP
-image: "/assets/images/socks-feet-pose-white-sport-sock.jpg"
+image: /afrodeals/assets/images/socks-feet-pose-white-sport-sock.jpg
 variants:
     - apple
     - banana

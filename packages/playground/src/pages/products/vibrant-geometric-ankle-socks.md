@@ -4,7 +4,7 @@ name: Vibrant Geometric Ankle Socks
 description: Soft and comfortable ankle socks with standout design.
 price: 8
 currency: GBP
-image: /assets/images/socks-feet-pose-in-geometric.jpg
+image: /afrodeals/assets/images/socks-feet-pose-in-geometric.jpg
 categories:
     - clothes
     - socks
