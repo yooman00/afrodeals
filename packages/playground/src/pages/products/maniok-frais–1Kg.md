@@ -1,21 +1,17 @@
 ---
-id: t-shirt-blue
-name: T-Shirt (Blue)
-decscription: Tri-blend T-Shirt designed for softness and comfort
-price: 18.00
-currency: GBP
-image: /afrodeals/assets/images/t-shirt-blue.jpg
+id: maniok-frais–1Kg
+name: Maniok frais – 1Kg
+decscription: Texture tendre et couleur blanche - produit de manière traditionnelle
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/10.png
+relatedProductIds:
+    - 1-Carton-de-45-Bobolos
+    - 8-Bobolo
+    - demi-carton-de-21-bobolos
 categories:
     - clothes
     - t-shirt
-sizes:
-    - XS
-    - S
-    - M
-    - L
-    - XL
-    - XXL
-    - XXXL
 layout: ../../layouts/SizePickerProductLayout.astro
 ---
 

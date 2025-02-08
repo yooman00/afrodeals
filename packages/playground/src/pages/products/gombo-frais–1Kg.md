@@ -1,21 +1,17 @@
 ---
-id: t-shirt-green
-name: T-Shirt (Green)
-decscription: Tri-blend T-Shirt designed for softness and comfort
-price: 18.50
-currency: GBP
-image: /afrodeals/assets/images/t-shirt-green.jpg
+id: gombo-frais–1Kg
+name: Gombo frais – 1Kg
+decscription: Gombo frais – 1Kg
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/10.png
+relatedProductIds:
+    - 1-Carton-de-45-Bobolos
+    - 8-Bobolo
+    - demi-carton-de-21-bobolos
 categories:
     - clothes
     - t-shirt
-sizes:
-    - XS
-    - S
-    - M
-    - L
-    - XL
-    - XXL
-    - XXXL
 layout: ../../layouts/SizePickerProductLayout.astro
 ---
 

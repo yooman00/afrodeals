@@ -1,21 +1,17 @@
 ---
-id: t-shirt-purple
-name: T-Shirt (Purple)
-image: /afrodeals/assets/images/t-shirt-purple.jpg
-price: 18.00
-currency: GBP
-decscription: Tri-blend T-Shirt designed for softness and comfort
+id: plantain-jaune–1Kg
+name: Plantain Jaune – 1Kg
+decscription: Texture tendre et couleur blanche - produit de manière traditionnelle
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/10.png
+relatedProductIds:
+    - 1-Carton-de-45-Bobolos
+    - 8-Bobolo
+    - demi-carton-de-21-bobolos
 categories:
     - clothes
     - t-shirt
-sizes:
-    - XS
-    - S
-    - M
-    - L
-    - XL
-    - XXL
-    - XXXL
 layout: ../../layouts/SizePickerProductLayout.astro
 ---
 

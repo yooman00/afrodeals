@@ -1,21 +1,17 @@
 ---
-id: t-shirt-light-green
-name: T-Shirt (Light Green)
-decscription: Tri-blend T-Shirt designed for softness and comfort
-price: 18.00
-currency: GBP
-image: /afrodeals/assets/images/t-shirt-light-green.jpg
+id: piment-frais–50g
+name: Piment frais – 50g
+decscription: Piment frais – 50g
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/10.png
+relatedProductIds:
+    - 1-Carton-de-45-Bobolos
+    - 8-Bobolo
+    - demi-carton-de-21-bobolos
 categories:
     - clothes
     - t-shirt
-sizes:
-    - XS
-    - S
-    - M
-    - L
-    - XL
-    - XXL
-    - XXXL
 layout: ../../layouts/SizePickerProductLayout.astro
 ---
 

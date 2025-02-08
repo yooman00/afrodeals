@@ -1,21 +1,16 @@
 ---
-id: classic-white-ankle-socks
-name: Classic white Ankle Socks
-decscription: Soft and comfortable ankle socks with a classic white design.
-price: 6
-originalPrice: 8
-currency: GBP
-image: /afrodeals/assets/images/socks-feet-pose-white-sport-sock.jpg
-variants:
-    - apple
-    - banana
+id: demi-carton-de-21-bobolos
+name: ½ Carton de 21 Bobolos
+decscription: Le Carton contient 7 paquets de 3 bâtons de manioc (7x3)
+price: 21.99
+currency: EUR
+image: /afrodeals/assets/images/2.png
 categories:
     - socks
     - cats
 relatedProductIds:
-    - t-shirt-blue
-    - sleepy-kitties-ankle-socks
-    - vibrant-geometric-ankle-socks
+    - 1-Carton-de-45-Bobolos
+    - 8-Bobolo
 layout: ../../layouts/StandardProductLayout.astro
 ---
 

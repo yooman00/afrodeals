@@ -1,11 +1,10 @@
 ---
-id: sleepy-kitties-ankle-socks
-name: Sleepy Kitties Ankle Socks
-description: Soft and comfortable ankle socks with stripes and a cute cat design.
-price: 6
-originalPrice: 8
-currency: GBP
-image: /afrodeals/assets/images/socks-feet-pose-in-cat.jpg
+id: huile-rouge-maejea-5l
+name: Huile Rouge MâJea - 5L
+description: Produit de manière traditionnelle au Cameroun. Sans arrière-goût – Ne colle pas sur la langue – idéale pour tous nos mets locaux
+price: 24.99
+currency: EUR
+image: /afrodeals/assets/images/3.png
 variants:
     - apple
     - banana
@@ -13,9 +12,7 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - t-shirt-blue
-    - vibrant-geometric-ankle-socks
-    - classic-white-ankle-socks
+    - huile-rouge-maejea-1l
 layout: ../../layouts/StandardProductLayout.astro
 ---
 

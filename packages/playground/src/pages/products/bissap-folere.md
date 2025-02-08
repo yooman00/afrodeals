@@ -1,10 +1,12 @@
 ---
-id: vibrant-geometric-ankle-socks
-name: Vibrant Geometric Ankle Socks
-description: Soft and comfortable ankle socks with standout design.
-price: 8
-currency: GBP
-image: /afrodeals/assets/images/socks-feet-pose-in-geometric.jpg
+id: bissap-folere
+name: Bissap / Folere
+description: Bissap / Folere / Hibiscus du nord Cameroun
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/14.png
+relatedProductIds:
+    - baobab
 categories:
     - clothes
     - socks

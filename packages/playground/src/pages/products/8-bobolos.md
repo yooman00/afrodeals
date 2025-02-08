@@ -1,11 +1,10 @@
 ---
-id: 1-Carton-de-45-Bobolo
-name: 1 Carton de 45 Bobolo
-decscription: Carton contenant 15 paquets de 3 bâtons de manioc (15x3).
-price: 44.99
-originalPrice: 44.99
-currency: GBP
-image: /afrodeals/assets/images/1.png
+id: 8-Bobolos
+name: 8 Bobolos
+decscription: 2 Paquets de 4 Bobolos
+price: 8
+currency: EUR
+image: /afrodeals/assets/images/2.png
 variants:
     - apple
     - banana
@@ -13,9 +12,8 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - t-shirt-blue
-    - sleepy-kitties-ankle-socks
-    - vibrant-geometric-ankle-socks
+    - 1-Carton-de-45-Bobolo
+    - demi-carton-de-21-bobolos
 layout: ../../layouts/StandardProductLayout.astro
 ---
 

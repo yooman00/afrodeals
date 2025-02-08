@@ -1,10 +1,12 @@
 ---
-id: t-shirt-red
-name: T-Shirt (Red)
-decscription: Tri-blend T-Shirt designed for softness and comfort
-price: 18.00
-currency: GBP
-image: /afrodeals/assets/images/t-shirt-red.jpg
+id: baobab
+name: baobab
+decscription: Pulpe de Baobab du nord Camerorun
+price: 3.5
+currency: EUR
+image: /afrodeals/assets/images/6.png
+relatedProductIds:
+    - bissap-folere
 categories:
     - clothes
     - t-shirt
