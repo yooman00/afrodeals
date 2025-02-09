@@ -4,7 +4,7 @@ name: Tapioca Jaune - 1Kg
 decscription: produit de manière traditionnelle et cuisson à la main
 price: 3.5
 currency: EUR
-image: /afrodeals/assets/images/t-shirt-green.jpg
+image: /afrodeals/assets/images/9.jpg
 categories:
     - clothes
     - t-shirt

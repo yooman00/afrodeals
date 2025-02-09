@@ -4,7 +4,7 @@ name: Gombo frais – 1Kg
 decscription: Gombo frais – 1Kg
 price: 3.5
 currency: EUR
-image: assets/images/10.png
+image: /afrodeals/assets/images/10.png
 relatedProductIds:
     - 1-Carton-de-45-Bobolos
     - 8-Bobolo
