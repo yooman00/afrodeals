@@ -1,5 +1,5 @@
 ---
-id: 8-Bobolos
+id: 8-bobolos
 name: 8 Bobolos
 decscription: 2 Paquets de 4 Bobolos
 price: 8
@@ -12,7 +12,7 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - 1-Carton-de-45-Bobolo
+    - 1-carton-de-45-bobolo
     - demi-carton-de-21-bobolos
 layout: ../../layouts/StandardProductLayout.astro
 ---

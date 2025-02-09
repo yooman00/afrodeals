@@ -20,6 +20,6 @@
     "@lloydjatkinson/astro-snipcart": "workspace:*",
     "@lloydjatkinson/astro-snipcart-design-system": "workspace:*",
     "@tailwindcss/forms": "^0.5.7",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.9"
   }
 }

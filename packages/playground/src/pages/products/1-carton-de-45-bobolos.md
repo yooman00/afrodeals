@@ -1,5 +1,5 @@
 ---
-id: 1-Carton-de-45-Bobolos
+id: 1-carton-de-45-bobolos
 name: 1 Carton de 45 Bobolos
 decscription: Carton contenant 15 paquets de 3 bâtons de manioc (15x3).
 price: 44.99

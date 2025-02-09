@@ -11,6 +11,7 @@ import { ProductMeta, SnipcartProduct } from '@lloydjatkinson/astro-snipcart';
 
 import { headerPageLinks, footerPageLinks } from '../layouts/config';
 
+//Object.values(import.meta.glob
 const products =
 	(await Astro.glob<SnipcartProduct & ProductMeta>('../pages/products/*.md'))
 	.map((markdownProduct) => ({ ...markdownProduct.frontmatter }));
@@ -27,14 +28,14 @@ const welcome = "Afrodeals shopping";
     footerLinks={ footerPageLinks }
 	storeName="Afrodeals"
     useDefaultLogo="hexagon"
-	image=`${import.meta.env.BASE_URL}/assets/images/t-shirts-on-hangers.jpg`
+	image=assets/images/t-shirts-on-hangers.jpg"
 	banner={ welcome }>
 	<Storefront
 		title="Afrodeals"
 		description="Demo store for Astro and Snipcart"
 		heroHeading="Your online Afroshop"
 		heroSubHeading={ welcome }
-		heroImage=`${import.meta.env.BASE_URL}/assets/images/t-shirts-on-hangers.jpg`
+		heroImage="assets/images/t-shirts-on-hangers.jpg"
 		products={ sortedProducts }>
 		<Stack
 			direction="vertical"

@@ -4,11 +4,11 @@ import { PageLink } from '@lloydjatkinson/astro-snipcart-design-system';
 import { StorePageLayout, ProductPageWithSizePicker } from '@lloydjatkinson/astro-snipcart-design-system/astro';
 
 const headerLinks: PageLink[] = [
-    { label: 'Products', to: '/products' }
+    { label: 'Products', to: `${import.meta.env.BASE_URL}/products` }
 ];
 
 const footerLinks: PageLink[] = [
-    { label: 'Products', to: '/products' }
+    { label: 'Products', to: `${import.meta.env.BASE_URL}/products` }
 ];
 
 const product: SnipcartProduct & ProductMeta = {

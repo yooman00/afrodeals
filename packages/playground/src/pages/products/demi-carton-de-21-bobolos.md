@@ -9,7 +9,7 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - 1-Carton-de-45-Bobolos
+    - 1-carton-de-45-bobolos
     - 8-Bobolo
 layout: ../../layouts/StandardProductLayout.astro
 ---
