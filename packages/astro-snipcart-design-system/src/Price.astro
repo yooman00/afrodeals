@@ -13,8 +13,8 @@ const {
     size = 'standard'
 } = Astro.props as Props;
 
-const formattedPrice = new Intl.NumberFormat('en', { style: 'currency', currency: currency }).format(price);
-const formattedOriginalPrice = new Intl.NumberFormat('en', { style: 'currency', currency: currency }).format(originalPrice);
+const formattedPrice = new Intl.NumberFormat('de', { style: 'currency', currency: currency }).format(price);
+const formattedOriginalPrice = new Intl.NumberFormat('de', { style: 'currency', currency: currency }).format(originalPrice);
 const isOnSale = price <= originalPrice;
 ---
 <Element class="flex gap-2">
