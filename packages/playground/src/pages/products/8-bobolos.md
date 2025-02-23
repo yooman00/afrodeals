@@ -12,7 +12,7 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - 1-carton-de-45-bobolo
+    - 1-carton-de-45-bobolos
     - demi-carton-de-21-bobolos
 layout: ../../layouts/StandardProductLayout.astro
 ---

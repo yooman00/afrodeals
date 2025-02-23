@@ -10,7 +10,7 @@ categories:
     - cats
 relatedProductIds:
     - 1-carton-de-45-bobolos
-    - 8-Bobolo
+    - 8-bobolos
 layout: ../../layouts/StandardProductLayout.astro
 ---
 

@@ -13,7 +13,7 @@ categories:
     - socks
     - cats
 relatedProductIds:
-    - 8-Bobolos
+    - 8-bobolos
     - demi-carton-de-21-bobolos
 layout: ../../layouts/StandardProductLayout.astro
 ---

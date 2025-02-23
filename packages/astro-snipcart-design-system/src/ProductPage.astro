@@ -9,6 +9,8 @@ import Stack from './Stack.astro';
 import RelatedProducts from './RelatedProducts.astro';
 import Button from './Button.astro';
 
+import { Debug } from 'astro/components';
+
 export type Props = SnipcartProductWithProductMeta & {
     readonly relatedProducts?: readonly SnipcartProductWithProductMeta[];
 };
@@ -52,7 +54,7 @@ const product = Astro.props as SnipcartProduct & ProductMeta;
     </section>
     <section>
         <RelatedProducts
-            products={ relatedProducts }
+            products={ product.relProds }
             currency={ currency } />
     </section>
 </div>

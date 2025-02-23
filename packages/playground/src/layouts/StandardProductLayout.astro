@@ -6,6 +6,17 @@ import { headerPageLinks, footerPageLinks } from './config';
 
 type Props = SnipcartProduct & ProductMeta;
 const product = Astro.props.content as Props;
+
+const relProds = [];
+const products =
+	(await Astro.glob<SnipcartProduct & ProductMeta>('../pages/products/*.md'))
+	.map((markdownProduct) => ({ ...markdownProduct.frontmatter }));
+
+product.relatedProductIds.forEach((relatedProductId) => {
+    const product2 = products.find((product) => product.id === relatedProductId);
+    relProds.push(product2);
+});
+
 ---
 <StorePageLayout
     title={ product.name }
@@ -13,11 +24,11 @@ const product = Astro.props.content as Props;
     headerLinks={ headerPageLinks }
     footerLinks={ footerPageLinks }
     image={ product.image }
-    storeName="Astro Snipcart Integration"
+    storeName="Afrodeals"
     useDefaultLogo="hexagon"
     { ...(product.price <= product.originalPrice ? { banner: 'This product is on sale, get it now!' } : {}) }>
     <ProductPage
-        { ...product }>
+        { ...product } relProds={ relProds }>
         <slot />
     </ProductPage>
 </StorePageLayout>
