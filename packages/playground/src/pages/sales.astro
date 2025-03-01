@@ -11,8 +11,14 @@ const products =
 	(await Astro.glob<SnipcartProduct & ProductMeta>('../pages/products/*.md'))
 	.map((markdownProduct) => ({ ...markdownProduct.frontmatter }));
 
-// sort products by cheapest first
-const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+// filter products on sale
+const sales = [];
+products.forEach((product) => {
+    if(product.price < product.originalPrice) {
+        sales.push(product);
+    }
+    
+});
 
 ---
 <StorePageLayout
@@ -22,10 +28,12 @@ const sortedProducts = [...products].sort((a, b) => a.price - b.price);
     footerLinks={ footerPageLinks }
     storeName="Afrodeals"
     useDefaultLogo="hexagon"
+
+    { ...(sales.length > 0 ? { banner: 'There are products on sale, get it now!' } : { banner: 'No products on sale for now, check back later!'}) }>
     <Stack>
         <ProductGrid>
             {
-                sortedProducts.map((product) => (
+                sales.map((product) => (
                     <ProductCard
                         currency={product.currency}
                         { ...product } />

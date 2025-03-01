@@ -26,7 +26,7 @@ product.relatedProductIds.forEach((relatedProductId) => {
     image={ product.image }
     storeName="Afrodeals"
     useDefaultLogo="hexagon"
-    { ...(product.price <= product.originalPrice ? { banner: 'This product is on sale, get it now!' } : {}) }>
+    { ...(product.price < product.originalPrice ? { banner: 'This product is on sale, get it now!' } : {}) }>
     <ProductPage
         { ...product } relProds={ relProds }>
         <slot />
