@@ -1,0 +1,42 @@
+---
+import { ProductMeta, SnipcartProduct } from '@lloydjatkinson/astro-snipcart';
+import{ Stack, ProductGrid, ProductCard, StorePageLayout } from '@lloydjatkinson/astro-snipcart-design-system/astro';
+import { headerPageLinks, footerPageLinks } from '../layouts/config';
+
+export interface Props {
+
+    readonly products: readonly SnipcartProduct[];
+}
+
+const products =
+	(await Astro.glob<SnipcartProduct & ProductMeta>('../pages/products/*.md'))
+	.map((markdownProduct) => ({ ...markdownProduct.frontmatter }));
+
+// sort products by cheapest first
+const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+
+const { as: Element = 'div' } = Astro.props as Props;
+console.log(sortedProducts);
+
+---
+
+
+<StorePageLayout
+    title="Products"
+    description="All products available"
+    headerLinks={ headerPageLinks }
+    footerLinks={ footerPageLinks }
+    storeName="Afrodeals"
+    useDefaultLogo="hexagon"
+    <Stack>
+        <ProductGrid>
+            {
+                sortedProducts.map((product) => (
+                    <ProductCard
+                        currency={product.currency}
+                        { ...product } />
+                ))
+            }
+        </ProductGrid>
+    </Stack>
+</StorePageLayout>
